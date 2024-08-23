@@ -1,8 +1,8 @@
 #include <iostream>
-#include <locale.h>
+#include <locale.h>//caracteres especiales en espaÃ±ol
 #include <wchar.h>
-//Introducción a las clases
-class bienvenida{
+//Introducciï¿½n a las clases
+class bienvenida{ //Crea una clase llamada bienvenida
 
     public:
         void hello();
@@ -10,13 +10,15 @@ class bienvenida{
 };
 
 void bienvenida::hello(){   
-    std::cout<<"Hola estudiantes de programación avanzada";
+    std::cout<<"Hola estudiantes de programación avanzada \n";
 }
 
 int main(){
     std::setlocale(LC_CTYPE,"Spanish");
     bienvenida saludo;
+    bienvenida saludo2,saludo3;
     saludo.hello();
+    saludo3.hello();
 
     return 0;
 
