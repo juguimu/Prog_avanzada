@@ -55,6 +55,21 @@ void Ejemplos::separacion(int n){
     cout<<"los dos ultimos: "<<d2*10+d1<<endl;
     cout<<"los dos ultimos: "<<n%100<<endl;
 
+    switch (n%100)
+    {
+    case 01:
+        cout<<"Gerente"<<endl;
+        break;
+    case 02:
+        cout<<"Administrativo"<<endl;
+        break;
+    case 03:
+        cout<<"Operativo"<<endl;
+        break;
+    default:
+        break;
+    }
+
 
 }
 
@@ -70,7 +85,7 @@ int main(){
     cout<<"La suma es: "<<op<<endl;
 
     cout<<"---Separar un numero entero en digitos---"<<endl;
-    obj.separacion(4586);
+    obj.separacion(4503);
 
 
     return 0;
