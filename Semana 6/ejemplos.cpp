@@ -11,6 +11,8 @@ public:
     void operacion1();
     int operacion2();
     void operacion3(int &);
+    //método de separación
+    void separacion(int);
 };
 
 Ejemplos::Ejemplos(int n1,int n2)
@@ -37,6 +39,25 @@ void Ejemplos::operacion3(int &op){
     op=a+b;
 }
 
+void Ejemplos::separacion(int n){
+    int d1,d2,d3,d4;
+
+    d1=n%10;
+    d2=(n/10)%10;
+    d3=(n/100)%10;
+    d4=(n/1000)%10;
+
+    cout<<"d1: "<<d1<<endl;
+    cout<<"d2: "<<d2<<endl;
+    cout<<"d3: "<<d3<<endl;
+    cout<<"d4: "<<d4<<endl;
+
+    cout<<"los dos ultimos: "<<d2*10+d1<<endl;
+    cout<<"los dos ultimos: "<<n%100<<endl;
+
+
+}
+
 int main(){
     int op;
     Ejemplos obj(2,5);
@@ -47,6 +68,10 @@ int main(){
     cout<<"---Opccion 3---"<<endl;
     obj.operacion3(op);
     cout<<"La suma es: "<<op<<endl;
+
+    cout<<"---Separar un numero entero en digitos---"<<endl;
+    obj.separacion(4586);
+
 
     return 0;
 }
