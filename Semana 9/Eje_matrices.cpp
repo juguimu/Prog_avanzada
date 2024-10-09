@@ -13,6 +13,7 @@ public:
     Curso(int=0,int=0);  
     void ingresar();
     void imprimir();
+    void ordenar_menmay();
 };
 
 Curso::Curso(int f,int c)
@@ -56,7 +57,31 @@ void Curso::imprimir(){
     }
 }
 
+void Curso::ordenar_menmay(){
+    float temp;
+    string ntemp;
+    for (int j = 0; j < filas-1; j++)
+    {
+        for (int i = 0; i < filas-j-1; i++)
+        {
+            if(notas[i][4]<notas[i+1][4]){
+                for (int c = 0; c < 5; c++)
+                {
+                    temp=notas[i][c];
+                    notas[i][c]=notas[i+1][c];
+                    notas[i+1][c]=temp;
+                }
 
+                ntemp=estudiantes[i];
+                estudiantes[i]=estudiantes[i+1];
+                estudiantes[i+1]=ntemp;
+
+                
+                
+            }
+        }
+    }
+}
 
 
 
@@ -64,6 +89,10 @@ int main(){
 
     Curso prog;
     prog.ingresar();
+    prog.imprimir();
+
+    cout<<"-------------------"<<endl;
+    prog.ordenar_menmay();
     prog.imprimir();
 
     return 0;
