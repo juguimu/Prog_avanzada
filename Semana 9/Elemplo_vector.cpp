@@ -82,14 +82,34 @@ void Curso::eliminar(string e){
 }
 
 int main(){
+    int opc=0;
     vector<string> n={"Juan","Andres","Samuel","Sebastina"};
     vector<int> e={32,15,16,25};
     Curso prog_avanzada(n,e);
-    prog_avanzada.imprimir();
+    while(opc!=5){
+        cout<<"Programacion avanzada"<<endl;
+        cout<<"-----------------------------\n";
+        cout<<"1- O_1"<<endl;
+        cout<<"2- O_2"<<endl;
+        cout<<"3- O_3"<<endl;
+        cout<<"4- O_4"<<endl;
+        cout<<"5- salir"<<endl;
+        cin>>opc;
+        switch (opc)
+        {
+        case 1:
+            prog_avanzada.imprimir();    
+            break;
+        
+        default:
+            break;
+        }
+    }
+    /* prog_avanzada.imprimir();
     prog_avanzada.ingresar_edad("Carlos",21);
     prog_avanzada.eliminar("Juan");
     prog_avanzada.ordenar_menmay();
-    prog_avanzada.imprimir();
+    prog_avanzada.imprimir(); */
 
     return 0;
 }
