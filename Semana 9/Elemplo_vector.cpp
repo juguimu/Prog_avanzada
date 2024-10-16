@@ -77,6 +77,7 @@ void Curso::eliminar(string e){
     {
         if(nombres.at(i)==e){
             nombres.erase(nombres.begin()+i);
+            edades.erase(edades.begin()+i);
         }
     }
     
