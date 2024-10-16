@@ -3,6 +3,7 @@
 #include<iomanip>
 #include<string>
 
+
 using namespace std;
 
 class Curso
@@ -82,6 +83,8 @@ void Curso::eliminar(string e){
 }
 
 int main(){
+    string nomEliminar,estudianteNuevo;
+    int edadNuevo;
     int opc=0;
     vector<string> n={"Juan","Andres","Samuel","Sebastina"};
     vector<int> e={32,15,16,25};
@@ -89,16 +92,45 @@ int main(){
     while(opc!=5){
         cout<<"Programacion avanzada"<<endl;
         cout<<"-----------------------------\n";
-        cout<<"1- O_1"<<endl;
-        cout<<"2- O_2"<<endl;
-        cout<<"3- O_3"<<endl;
-        cout<<"4- O_4"<<endl;
+        cout<<"1- Imprimir en pantalla"<<endl;
+        cout<<"2- Ingresar estudiante"<<endl;
+        cout<<"3- Ordenar"<<endl;
+        cout<<"4- Eliminar"<<endl;
         cout<<"5- salir"<<endl;
         cin>>opc;
         switch (opc)
         {
         case 1:
+            system("cls");
             prog_avanzada.imprimir();    
+            system("pause");
+            system("cls");
+            break;
+        case 2:
+            system("cls");
+            cout<<"Ingrese el nombre del nuevo estudiante: "<<endl;
+            cin>>estudianteNuevo;
+            cout<<"Ingrese la edad del nuevo estudiante: "<<endl;
+            cin>>edadNuevo;
+            prog_avanzada.ingresar_edad(estudianteNuevo,edadNuevo);    
+            system("pause");
+            system("cls");
+            break;
+        case 3:
+            system("cls");
+            prog_avanzada.ordenar_menmay();  
+            cout<<"Se ha ordenado la lista"<<endl;  
+            system("pause");
+            system("cls");
+            break;
+        case 4:
+            system("cls");
+            prog_avanzada.imprimir();
+            cout<<"Cual estudiante desea eliminar: "<<endl;
+            cin>>nomEliminar;
+            prog_avanzada.eliminar(nomEliminar);    
+            system("pause");
+            system("cls");
             break;
         
         default:
