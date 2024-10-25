@@ -13,6 +13,8 @@ end
 %% ciclo while
 clc
 n=0;
+
+
 while(n<10)
   disp(['El valor del n: ',num2str(n)])
   if n==5

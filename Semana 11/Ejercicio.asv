@@ -1,0 +1,13 @@
+%Ingresar edades de n estudiantes
+%Imprimir promedio de edades
+%Imprimir la edad mayor
+%Imprimir la edad menor
+%Termina cuando ingresan el 999
+
+%% Solución
+
+n=0;
+while(n~=999)
+    edad=input('Ingrese la edad del estudiante');
+
+end    
