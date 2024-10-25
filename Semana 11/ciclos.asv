@@ -1,0 +1,9 @@
+%%Imprimir el iterador de un ciclo
+clc
+for n=0:3:10 %inicializar el iterador:paso:hasta donde
+    disp(['El iterador va en: ',num2str(n)]);
+end    
+
+%%Iterar un vector
+
+for vec=[]
