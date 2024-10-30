@@ -1,0 +1,17 @@
+%%Programa que usa la clase Numero
+
+obj=Numero(4,5);
+
+while(true)
+    
+    disp('Programa de la clase Numero')
+    disp('1 para suma')
+    disp('2 para resta')
+    disp('3 para multiplicacion')
+    disp('4 para division')
+    disp('5 para salir')
+    n=input('Ingrese la opción: ');
+    
+    swtch
+
+end    
