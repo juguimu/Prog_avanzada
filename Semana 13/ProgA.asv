@@ -20,10 +20,22 @@ classdef ProgA < handle
         end    
 
         function obj=setEstudiantes(obj,est,n1,n2)
-            obj.estudiantes{}=est;
+            obj.estudiantes{end+1}=est;
             obj.nota_1=[obj.nota_1 n1];
             obj.nota_2=[obj.nota_2 n2];
             obj.notaFinal=[obj.notaFinal (n1+n2)./2];        
+        end    
+
+        function obj=delEst(obj,est)
+            for i=1:length(obj.estudiantes)
+                if(est=obj.estudiantes(i))%ojo! hay que 
+                    obj.estudiantes{i}=[];
+                    obj.nota_1(i)=[];
+                    obj.nota_2(i)=[];
+                    obj.notaFinal(i)=[];
+                end
+            end    
+                    
         end    
 
     end    

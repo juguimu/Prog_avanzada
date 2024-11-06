@@ -26,6 +26,18 @@ classdef ProgA < handle
             obj.notaFinal=[obj.notaFinal (n1+n2)./2];        
         end    
 
+        function obj=delEst(obj,est)
+            for i=1:length(obj.estudiantes)
+                if(est=obj.estudiantes(i))%ojo! hay que organizar
+                    obj.estudiantes{i}=[];
+                    obj.nota_1(i)=[];
+                    obj.nota_2(i)=[];
+                    obj.notaFinal(i)=[];
+                end
+            end    
+                    
+        end    
+
     end    
 
 
